@@ -2,6 +2,7 @@ package leetcode.easy;
 
 import java.util.HashMap;
 
+/// 1. TwoSum
 public class TwoSum {
     // O(n)
     public int[] solution(int[] nums, int target) {
