@@ -11,7 +11,6 @@ public class ProteinTranslator {
 
         var proteins = new ArrayList<String>();
 
-
         var count = 0;
         while (count < rnaSequence.length()) {
             var rna = rnaSequence.substring(count, count + 3);
