@@ -1,4 +1,4 @@
-package org.example;
+package org.app;
 
 public enum Status {
     TODO,

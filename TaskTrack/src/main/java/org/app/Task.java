@@ -1,14 +1,13 @@
-package org.example;
+package org.app;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Task {
     private UUID id;
     private String description;
     private Status status;
+    private LocalDateTime test;
 
     public Task() {}
 
@@ -16,6 +15,7 @@ public class Task {
         this.id = id;
         this.description = description;
         this.status = status;
+        test = LocalDateTime.now();
     }
 
     public UUID getId() {

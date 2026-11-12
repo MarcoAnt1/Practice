@@ -1,9 +1,10 @@
-package org.example;
+package org.app;
 
 import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 import com.google.gson.Gson;
@@ -22,9 +23,8 @@ public class TaskTrack {
             Type listType = new TypeToken<ArrayList<Task>>(){}.getType();
             var reader = new JsonReader(new FileReader("mydata.json"));
             List<Task> tasks1 = gson.fromJson(reader, listType);
-            if (tasks1 == null) {
-                tasks = new ArrayList<>();
-            }
+            tasks = Objects.requireNonNullElseGet(tasks1, ArrayList::new);
+
         } else {
             tasks = new ArrayList<>();
             saveJson();
